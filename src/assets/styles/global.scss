@@ -1,0 +1,7 @@
+@use "./font";
+@use "./reset";
+@use "./variables";
+
+body {
+    background-color: var(--very-dark-grey);
+}
