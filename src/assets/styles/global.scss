@@ -5,3 +5,27 @@
 body {
     background-color: var(--very-dark-grey);
 }
+
+.text {
+    color: #E6E5EA;
+}
+
+.box {
+    background-color: var(--dark-grey);
+    min-width: 343px;
+    padding: 12px;
+}
+
+/*================================*/
+/* This css style is for element-plus */
+
+.el-checkbox {
+    --el-checkbox-checked-text-color: #E6E5EA;
+    --el-checkbox-text-color: #E6E5EA;
+    --el-checkbox-bg-color: var(--dark-grey);
+    &__inner {
+        &:after {
+            --el-checkbox-checked-icon-color: var(--very-dark-grey);
+        }
+    }
+}

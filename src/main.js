@@ -1,5 +1,11 @@
+import 'element-plus/dist/index.css'
 import { createApp } from 'vue'
-import './assets/styles/global.scss'
 import App from './App.vue'
+import { loadFonts } from './plugins/webfontloader'
+import ElementPlus from "element-plus"
 
-createApp(App).mount('#app')
+loadFonts()
+
+createApp(App)
+  .use(ElementPlus)
+  .mount('#app')

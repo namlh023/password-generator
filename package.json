@@ -1,19 +1,27 @@
 {
   "name": "password-generator",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
+    "serve": "vite preview",
     "build": "vite build",
+    "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/font": "5.9.55",
+    "element-plus": "^2.2.17",
+    "roboto-fontface": "*",
     "sass": "^1.54.9",
-    "vue": "^3.2.37"
+    "vue": "^3.2.37",
+    "vuetify": "npm:@vuetify/nightly@next",
+    "webfontloader": "^1.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
-    "vite": "^3.1.0"
-  }
+    "vite": "^3.1.0",
+    "vite-plugin-vuetify": "^1.0.0-alpha.12",
+    "vue-cli-plugin-vuetify": "~2.5.8"
+  },
+  "type": "module"
 }
