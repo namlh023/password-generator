@@ -1,5 +1,5 @@
 <script setup>
-    import {ref, reactive, computed, watch} from 'vue'
+    import {ref, reactive, computed, onMounted} from 'vue'
 
     const password = ref("");
     const characterLength = ref(10)
@@ -9,6 +9,9 @@
         number: true,
         symbol: false
     })
+
+    onMounted(() => generatePassword())
+    
     const strength = computed(() => {
         let strength_of_password = [options.uppercase, options.lowercase, options.number, options.symbol].filter((item) => item == true).length
         if (strength_of_password === 0 || strength_of_password === 1) {
@@ -22,7 +25,7 @@
         }
     })
 
-    const generatePassword = () => {
+    function generatePassword() {
         let result = "";
         let characters = "";
         const upperLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -47,8 +50,6 @@
         }
         password.value = result ? result : "This is the way";
     }
-
-    generatePassword();
 
 </script>
 
